@@ -8,16 +8,15 @@ AM_LDFLAGS=$(all_libraries)
 
 bin_PROGRAMS=a2cass
 
-a2cass_SOURCES=\
-a2cass.c
+a2cass_SOURCES=a2cass.c
 
 
 check_SCRIPTS=unit_test.sh
 TESTS=$(check_SCRIPTS)
 
 unit_test.sh: .FORCE
-echo "./a2cass --test" >>$@
-chmod +x $@
+	echo "./a2cass --test" >>$@
+	chmod +x $@
 
 
 
