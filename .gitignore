@@ -1,9 +1,11 @@
 /ABOUT-NLS*
+/INSTALL
 /Makefile.in
 /aclocal.m4
 /autom4te.cache/
 /build-aux/
 /config.h.in*
+/config.rpath
 /configure
 /gnulib/
 /lib/
