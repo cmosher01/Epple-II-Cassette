@@ -1,0 +1,12 @@
+/ABOUT-NLS*
+/Makefile.in
+/aclocal.m4
+/autom4te.cache/
+/build-aux/
+/config.h.in*
+/configure
+/gnulib/
+/lib/
+/m4/
+/po/
+/tests/
