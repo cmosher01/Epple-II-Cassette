@@ -9,6 +9,8 @@
 #include <stdio.h>
 #include <binary-io.h>
 
+#include "a2cass_opt.h"
+
 int CYC_HEAD = 65;
 int CYC_SYNC_0 = 20;
 int CYC_SYNC_1 = 25;
@@ -65,13 +67,12 @@ static void out_byte(int b)
     }
 }
 
-int main(int argc, char *argv[])
+static int run_program(struct opts_t* opts)
 {
   int b;
   int c;
 
-  (void)argc;
-  (void)argv;
+  (void)opts;
 
   SET_BINARY(0);
   SET_BINARY(1);
@@ -89,4 +90,11 @@ int main(int argc, char *argv[])
   fprintf(stderr,"wrote data: %d bytes.\n",c);
 
   return EXIT_SUCCESS;
+}
+
+int main(int argc, char *argv[])
+{
+  struct opts_t *opts = parse_opts(argc,argv);
+
+  return run_program(opts);
 }

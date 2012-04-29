@@ -12,6 +12,9 @@ AM_INIT_AUTOMAKE([-Wall -Werror])
 AC_PROG_CC
 gl_EARLY
 
+AC_PATH_PROG([MD5SUM],[md5sum])
+AC_ARG_VAR([MD5SUM],[path to md5sum])
+
 #All compiler-warning stuff came from coreutils
 #which is
 # Copyright (C) 1991, 1993-2010 Free Software Foundation, Inc.
