@@ -7,8 +7,9 @@ AM_LDFLAGS=$(all_libraries)
 
 bin_PROGRAMS=a2cass
 
-a2cass_SOURCES=a2cass.c a2cass_opt.c
-
+a2cass_SOURCES=a2cass.c a2cass_opt.c a2cass_opt.h
+noinst_DATA=hello.md5
+EXTRA_DIST=hello.md5
 
 
 define_new_md5: all
